@@ -38,7 +38,6 @@ patch(PosDB.prototype, {
 add_products(products) {
   var obj = this
   var stored_categories = this.product_by_category_id;
-  const product_by_barcode = {};
 
 
   if (!(products instanceof Array)) {
