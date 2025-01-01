@@ -36,6 +36,7 @@ patch(PosDB.prototype, {
 },
 
 add_products(products) {
+  var obj = this
   var stored_categories = this.product_by_category_id;
   const product_by_barcode = {};
 
@@ -87,7 +88,7 @@ add_products(products) {
                           var barcodes = JSON.parse(product.barcodes_json);
                           // const product_by_barcode = {}
                           barcodes.forEach(function (barcode) {
-                              product_by_barcode[barcode] = product;
+                              obj.product_by_barcode[barcode] = product;
                           });
                       });
                       // console.log('barcode',product_by_barcode)
